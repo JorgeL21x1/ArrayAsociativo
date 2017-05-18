@@ -1,8 +1,12 @@
 import static org.junit.Assert.*;
 
+import java.util.NoSuchElementException;
+
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 public class ArrayAsociativoTest {
 	private ArrayAsociativo a;
@@ -31,5 +35,12 @@ public class ArrayAsociativoTest {
 	public void ArrayNoVacio() {
 		assertTrue(a.size()==4);
 	}
-
+	
+	@Rule
+	public ExpectedException posibleExcepcion = ExpectedException.none();
+	@Test
+	public void BuscaValorArrayVacio() {
+		posibleExcepcion.expect(NoSuchElementException.class);
+		a.get(claves[0]);//Busca la primera clave
+	}
 }
