@@ -1,4 +1,4 @@
-
+import java.util.NoSuchElementException;
 
 public class ArrayAsociativo {
 	//Clases internas
@@ -51,6 +51,10 @@ public class ArrayAsociativo {
 	
 	//Para una clave devuelve el valor asociado
 	public String get(String clave){
+		if(primero==null){
+			throw new NoSuchElementException("Array vacia");
+
+		}
 		return clave;
 		
 	}

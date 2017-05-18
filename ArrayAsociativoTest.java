@@ -40,6 +40,7 @@ public class ArrayAsociativoTest {
 	public ExpectedException posibleExcepcion = ExpectedException.none();
 	@Test
 	public void BuscaValorArrayVacio() {
+		a = new ArrayAsociativo();
 		posibleExcepcion.expect(NoSuchElementException.class);
 		a.get(claves[0]);//Busca la primera clave
 	}
