@@ -13,12 +13,10 @@ public class ArrayAsociativoTest {
 	@Before
 	public void inicializar(){
 	a= new ArrayAsociativo(claves,valores);
-	System.out.println("Before");
 	}
 	@After 
 	public void finalizar(){
 	a=null;
-	System.out.println("After");
 	}
 
 	

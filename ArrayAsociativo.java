@@ -38,7 +38,14 @@ public class ArrayAsociativo {
 	
 	// Devuelve el número de entradas del arry asociativo.
 	public int size(){
-		return 0;
+		
+		int size = 0;
+		Nodo aux = primero;
+		while (aux != null) {
+			size++;
+			aux = aux.sig;
+		}
+		return size;
 		
 	}
 	
