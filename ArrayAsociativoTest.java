@@ -79,10 +79,21 @@ public class ArrayAsociativoTest {
 	
 	//7
 	@Test
+	/*da la casualidad de que si insertas por delante aunestando mal el codigo sale bien
+	 * lo suyo seria comprobar que las dos arrays asociativas son igaules como intente hacer 
+	 * en el test 6 pero no consigo que que me las reconozca como iguales
+	 */
 	public void InsertarNuevoArrayNoVacio() {
 		a.put(claves1[0], valores1[0]);
 		
 		assertTrue(a.get(claves1[0]) == valores[0]);
+	}
+	
+	//8
+	public void InsertarExistenteArrayNoVacio() {
+		a.put(claves[2], valores1[0]);
+		
+		assertTrue(a.get(claves[2]) == valores1[0]);
 	}
 	
 }
