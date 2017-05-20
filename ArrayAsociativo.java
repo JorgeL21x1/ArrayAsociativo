@@ -59,7 +59,7 @@ public class ArrayAsociativo {
 	}
 		
 		if(aux==null){
-			throw new NoSuchElementException("Array vacia");
+			throw new NoSuchElementException("No se encuentra la clave");
 		}else{
 			valor=aux.valor;
 		}

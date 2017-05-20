@@ -49,4 +49,11 @@ public class ArrayAsociativoTest {
 	public void BuscaValorArrayExiste() {
 		assertTrue(a.get(claves[0])==valores[0]);
 	}
+	//5
+	@Test
+	public void BuscaValorArrayNoExiste() {
+		posibleExcepcion.expect(NoSuchElementException.class);
+		a.get("prueba");
+	}
+	
 }
