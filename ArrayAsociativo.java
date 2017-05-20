@@ -51,12 +51,20 @@ public class ArrayAsociativo {
 	
 	//Para una clave devuelve el valor asociado
 	public String get(String clave){
-		if(primero==null){
-			throw new NoSuchElementException("Array vacia");
-
-		}
-		return clave;
+		Nodo aux= primero;
+		String valor;
 		
+	while(aux!=null && aux.clave!=clave){
+		aux=aux.sig;
+	}
+		
+		if(aux==null){
+			throw new NoSuchElementException("Array vacia");
+		}else{
+			valor=aux.valor;
+		}
+		
+	return valor;	
 	}
 	
 	//crea una  nueva entrada en la tabla en caso de existir la clave cambia al nuevo valor
