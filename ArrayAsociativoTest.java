@@ -16,6 +16,9 @@ public class ArrayAsociativoTest {
 
 	private String[] claves1 = {"nombre"};
 	private String[] valores1 = {"luis"};
+	
+	private String[] claves2 = {"nombre","apellido","dni","pais","nombre"};
+	private String[] valores2 = {"luis","martin","12345567P","Espana","luis"};
 
 	@Before
 	public void inicializar(){
@@ -62,10 +65,24 @@ public class ArrayAsociativoTest {
 	//6
 	@Test
 	public void InsertarNuevoArrayVacio() {
-		a = new ArrayAsociativo();
+		/*a = new ArrayAsociativo();
 		ArrayAsociativo b = new ArrayAsociativo(claves1,valores1);
 		a.put(claves1[0],valores1[0]);
 		assertEquals(a,b);
-		b=null;
+		b=null;*/
+		
+		
+		/*a= new ArrayAsociativo();
+		a.put(claves1[0],valores1[0]);
+		assertTrue(a.get(claves1[0]) == valores[0]);*/
 	}
+	
+	//7
+	@Test
+	public void InsertarNuevoArrayNoVacio() {
+		a.put(claves1[0], valores1[0]);
+		
+		assertTrue(a.get(claves1[0]) == valores[0]);
+	}
+	
 }

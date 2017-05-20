@@ -70,8 +70,8 @@ public class ArrayAsociativo {
 	//crea una  nueva entrada en la tabla en caso de existir la clave cambia al nuevo valor
 	public void put(String clave, String valor){
 	primero.clave=clave;
-	primero.valor=valor;
 	primero.sig=null;
+	primero.valor=valor;
 	}
 	
 	/*para una clave dada devuelve el valor asociado en caso de 
