@@ -107,21 +107,25 @@ public class ArrayAsociativoTest {
 		assertTrue(a.getOrElse(claves[0],"ValorPorDefecto") == valores[0]);
 	}
 	
-	//10
+	//11
 	@Test
 	public void BuscargetOrElseArrayClaveNoExiste() {
 			
 		assertTrue(a.getOrElse("xd","ValorPorDefecto") == "ValorPorDefecto" );
 	}
 		
-	//11
+	//12
 	@Test
 	public void ClaveExisteArrayVacio() {
 	a = new ArrayAsociativo();	
 	assertTrue(!(a.containsKey(claves[0])));
 	}
 			
-	
+	//13
+	@Test
+	public void ClaveExisteArrayNoContiene() {
+		assertTrue(!(a.containsKey("xd")));
+	}
 
 	
 }
