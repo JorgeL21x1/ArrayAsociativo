@@ -127,12 +127,20 @@ public class ArrayAsociativoTest {
 		assertTrue(!(a.containsKey("xd")));
 	}
 
-	//13
+	//14
 	@Test
 	public void ClaveExisteArraySIContiene() {
 		assertTrue(a.containsKey(claves[0]));
 	}
 
+	//15
+	@Test
+	public void BorrarArrayVacia() {
+		a = new ArrayAsociativo();	
+		int tam=a.size();
+		a.remove(claves[0]);
+		assertTrue(a.size()==tam);
+	}
 	
 	
 }
