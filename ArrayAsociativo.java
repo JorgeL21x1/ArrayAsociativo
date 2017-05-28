@@ -68,10 +68,30 @@ public class ArrayAsociativo {
 	}
 	
 	//crea una  nueva entrada en la tabla en caso de existir la clave cambia al nuevo valor
-	public void put(String clave, String valor){
-	primero.clave=clave;
-	primero.sig=null;
-	primero.valor=valor;
+	public void put(String clave, String valor) {
+		Nodo anterior = null;
+		Nodo actual = primero;
+		
+		if (primero == null) {
+			actual.clave = clave;
+			actual.valor = valor;
+			actual.sig = null;
+			primero = actual;
+		} else {
+			while (actual != null && actual.clave != clave){
+				anterior = actual;
+				actual = actual.sig;
+			}
+				
+			boolean encontrado = (actual.clave == clave);
+				
+			if (encontrado) {
+				actual.valor = valor;
+			} else {
+				actual= new Nodo(clave,valor,null);
+				anterior.sig=actual;
+			}
+		}
 	}
 	
 	/*para una clave dada devuelve el valor asociado en caso de 

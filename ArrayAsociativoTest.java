@@ -65,35 +65,38 @@ public class ArrayAsociativoTest {
 	//6
 	@Test
 	public void InsertarNuevoArrayVacio() {
-		/*a = new ArrayAsociativo();
-		ArrayAsociativo b = new ArrayAsociativo(claves1,valores1);
+		int tam=a.size();
+		a= new ArrayAsociativo();
 		a.put(claves1[0],valores1[0]);
-		assertEquals(a,b);
-		b=null;*/
-		
-		
-		/*a= new ArrayAsociativo();
-		a.put(claves1[0],valores1[0]);
-		assertTrue(a.get(claves1[0]) == valores[0]);*/
+		assertTrue(tam+1==a.size());
 	}
 	
 	//7
 	@Test
-	/*da la casualidad de que si insertas por delante aunestando mal el codigo sale bien
-	 * lo suyo seria comprobar que las dos arrays asociativas son igaules como intente hacer 
-	 * en el test 6 pero no consigo que que me las reconozca como iguales
-	 */
 	public void InsertarNuevoArrayNoVacio() {
+		int tam=a.size();
+		System.out.println(tam);
 		a.put(claves1[0], valores1[0]);
 		
 		assertTrue(a.get(claves1[0]) == valores[0]);
+		System.out.println(tam);
+		assertTrue(tam+1 == a.size());
 	}
 	
 	//8
+	@Test
 	public void InsertarExistenteArrayNoVacio() {
+		int tam=a.size();
 		a.put(claves[2], valores1[0]);
 		
 		assertTrue(a.get(claves[2]) == valores1[0]);
+		assertTrue(tam == a.size());
+	}
+	
+	//9
+	@Test
+	public void BuscargetOrElseArrayVacio() {
+		assertTrue(a.getOrElse(claves[0], "ValorPorDefecto") == "ValorPorDefecto");
 	}
 	
 }
