@@ -140,6 +140,7 @@ public class ArrayAsociativoTest {
 		int tam=a.size();
 		a.remove(claves[0]);
 		assertTrue(a.size()==tam);
+		assertTrue(!(a.remove(claves[0])));
 	}
 	
 	//16
@@ -147,7 +148,8 @@ public class ArrayAsociativoTest {
 		public void BorrarParArrayNoVacioContiene() {
 			int tam=a.size();
 			a.remove(claves[0]);
-			assertTrue(a.size()-1==tam);
+			assertTrue((a.size()-1)==tam);
+			assertTrue(a.remove(claves[0]));
 		}
 	
 	

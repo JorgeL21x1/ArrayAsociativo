@@ -133,7 +133,25 @@ public class ArrayAsociativo {
 
 	//borra el par asociado en caso de realizarse  con exito devuelve true o false si no
 	public boolean remove(String clave){
-		return false;
+		Nodo anterior = null;
+		Nodo actual = primero;
+		boolean resultado;
+		
+		while (actual != null && actual.clave != clave){
+			anterior = actual;
+			actual = actual.sig;
+		}
+			
+		boolean encontrado = (actual != null) && (actual.clave == clave);
+			
+		if (encontrado) {
+			anterior.sig = actual.sig;
+			resultado = true;
+		} else {
+			resultado = false;
+		}
+	
+		return resultado;
 		
 	}
 	
