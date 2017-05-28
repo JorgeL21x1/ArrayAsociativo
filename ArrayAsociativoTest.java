@@ -111,7 +111,7 @@ public class ArrayAsociativoTest {
 		@Test
 		public void BuscargetOrElseArrayClaveNoExiste() {
 			
-			assertTrue(a.getOrElse(claves[0],"ValorPorDefecto") == "ValorPorDefecto" );
+			assertTrue(a.getOrElse("xd","ValorPorDefecto") == "ValorPorDefecto" );
 		}
 	
 	
