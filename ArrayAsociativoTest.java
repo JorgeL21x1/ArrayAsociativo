@@ -127,5 +127,12 @@ public class ArrayAsociativoTest {
 		assertTrue(!(a.containsKey("xd")));
 	}
 
+	//13
+	@Test
+	public void ClaveExisteArraySIContiene() {
+		assertTrue(a.containsKey(claves[0]));
+	}
+
+	
 	
 }
