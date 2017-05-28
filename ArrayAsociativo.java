@@ -114,7 +114,20 @@ public class ArrayAsociativo {
 	
 	//Devuelve true si existe la clave o false si no
 	public boolean containsKey(String clave){
-		return false;
+		boolean resultado;
+		Nodo aux = primero;
+		
+		while(aux != null && clave != aux.clave){
+			aux = aux.sig;
+		}
+		
+		if (aux == null){
+			resultado = false;
+		} else{
+			resultado = true;
+		}
+		
+		return resultado;
 		
 	}
 
