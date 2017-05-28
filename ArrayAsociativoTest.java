@@ -96,7 +96,25 @@ public class ArrayAsociativoTest {
 	//9
 	@Test
 	public void BuscargetOrElseArrayVacio() {
+		a = new ArrayAsociativo();
 		assertTrue(a.getOrElse(claves[0], "ValorPorDefecto") == "ValorPorDefecto");
 	}
+	
+	//10
+	@Test
+	public void BuscargetOrElseArrayClaveExiste() {
+		
+		assertTrue(a.getOrElse(claves[0],"ValorPorDefecto") == valores[0]);
+	}
+	
+	//10
+		@Test
+		public void BuscargetOrElseArrayClaveNoExiste() {
+			
+			assertTrue(a.getOrElse(claves[0],"ValorPorDefecto") == "ValorPorDefecto" );
+		}
+	
+	
+
 	
 }

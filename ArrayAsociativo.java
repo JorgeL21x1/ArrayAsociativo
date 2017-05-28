@@ -97,8 +97,19 @@ public class ArrayAsociativo {
 	/*para una clave dada devuelve el valor asociado en caso de 
 	no haber devuelve valor por defecto*/
 	public String getOrElse(String clave, String valorPorDefecto){
-		return valorPorDefecto;
+		Nodo aux = primero;
+		String res;
 		
+		while(aux != null && clave != aux.clave){
+			aux = aux.sig;
+		}
+		
+		if (aux == null){
+			return valorPorDefecto;
+		} else{
+			res = aux.valor;
+			return res;
+		}
 	}
 	
 	//Devuelve true si existe la clave o false si no
